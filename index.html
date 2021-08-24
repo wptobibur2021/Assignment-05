@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-6">
+                <div class="prosuct-info">
+                    <h2>Product Name</h2>
+                    <p>Product Descriptio</p>
+                    <div class="memory-product">
+                        <p>Memory</p>
+                        <button id='memory_8gb' class="btn btn-outline-primary">8 GB Unifinde Memory</button>
+                        <button id='memory_16gb' class="btn btn-outline-secondary">8 GB Unifinde Memory</button>
+                    </div>
+
+                    <div class="memory-product">
+                        <p>Storage</p>
+                        <button id='storage_256gb' class="btn btn-outline-success">256GB SSD Stoarge</button>
+                        <button id='storage_512gb' class="btn btn-outline-danger">512GB SSD Stoarge</button>
+                        <button id='storage_1tb' class="btn btn-outline-warning">1TB SSD Stoarge</button>
+                    </div>
+
+                    <div class="memory-product">
+                        <p>Choose Delivery Options</p>
+                        <button id='delivery_free' class="btn btn-outline-info">Free Delivery</button>
+                        <button id='delivery_charge' class="btn btn-outline-dark">Delivery Charge $20</button>
+                    </div>
+
+                    <div class="price-list mt-3 ml-0">
+                        <ul class="group-list">
+                            <li class="list-group-item">Best Price: $1299</li>
+                            <li class="list-group-item">Extra Memory Cost: $<span id="extraMemory">0</span></li>
+                            <li class="list-group-item">Extra Storage Cost: $<span id="extraStorage">0</span></li>
+                            <li class="list-group-item">Delivery Charge: $<span id="deliveryCharge">0</span></li>
+                            <li class="list-group-item">Total Price: </li>
+                        </ul>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='./js/index.js'></script>
+</body>
+</html>
