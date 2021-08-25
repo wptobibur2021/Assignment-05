@@ -5,35 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Assignment Five</title>
+    <style>
+        .product-image img {
+            width: 550px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-
+                <div class="product-image">
+                    <img src="mac.png" class="img">
+                </div>
             </div>
             <div class="col-md-6">
                 <div class="prosuct-info">
-                    <h2>Product Name</h2>
-                    <p>Product Descriptio</p>
+                    <h2>Customize your Blue 24 inch iMac with Apple M1 chip.</h2>
+                    <p>Apple M1 chip with 8 core CPU with 4 performance cores and 4 efficiency cores. 7 core GPU and 16 core neural engine 8 GB unified memory 256GB SSD storage TWO thunderbolt / USD 4 Ports Magic Mouse Magic Keyboard - US English</p>
                     <div class="memory-product">
                         <p>Memory</p>
-                        <button id='memory_8gb' class="btn btn-outline-primary">8 GB Unifinde Memory</button>
-                        <button id='memory_16gb' class="btn btn-outline-secondary">8 GB Unifinde Memory</button>
+                        <button onclick="productInfo('memory_8gb')"  id='memory_8gb' class="btn btn-outline-primary">8 GB Unified Memory</button>
+                        <button onclick="productInfo('memory_16gb')"  id='memory_16gb' class="btn btn-outline-secondary">16 GB Unified Memory</button>
                     </div>
 
                     <div class="memory-product">
                         <p>Storage</p>
-                        <button id='storage_256gb' class="btn btn-outline-success">256GB SSD Stoarge</button>
-                        <button id='storage_512gb' class="btn btn-outline-danger">512GB SSD Stoarge</button>
-                        <button id='storage_1tb' class="btn btn-outline-warning">1TB SSD Stoarge</button>
+                        <button onclick="productInfo('storage_256gb')" id='storage_256gb' class="btn btn-outline-success">256GB SSD Storage</button>
+                        <button onclick="productInfo('storage_512gb')"  id='storage_512gb' class="btn btn-outline-danger">512GB SSD Storage</button>
+                        <button onclick="productInfo('storage_1tb')"  id='storage_1tb' class="btn btn-outline-warning">1TB SSD Storage</button>
                     </div>
 
                     <div class="memory-product">
                         <p>Choose Delivery Options</p>
-                        <button id='delivery_free' class="btn btn-outline-info">Free Delivery</button>
-                        <button id='delivery_charge' class="btn btn-outline-dark">Delivery Charge $20</button>
+                        <button onclick="productInfo('delivery_free')"  id='delivery_free' class="btn btn-outline-info">Free Delivery</button>
+                        <button onclick="productInfo('delivery_charge')"  id='delivery_charge' class="btn btn-outline-dark">Delivery Charge $20</button>
                     </div>
 
                     <div class="price-list mt-3 ml-0">
@@ -42,10 +49,17 @@
                             <li class="list-group-item">Extra Memory Cost: $<span id="extraMemory">0</span></li>
                             <li class="list-group-item">Extra Storage Cost: $<span id="extraStorage">0</span></li>
                             <li class="list-group-item">Delivery Charge: $<span id="deliveryCharge">0</span></li>
-                            <li class="list-group-item">Total Price: </li>
+                            <li class="list-group-item">SubTotal Price: $<span id="subTotal">1299</span></li>
                         </ul>
                     </div>
-                   
+                    <div class="discount p-5">
+                        <label class="mb-2">Apply Coupon</label>
+                        <input required type="text" class="form-control" id="discount" placeholder="You can apply Coupon" />
+                        <button onclick="couponApply()" id="discount_btn" class="btn btn-outline-dark mt-3">Apply</button>
+                    </div>
+                    <div class="total-amount pb-3">
+                        <h5 class="text-dark">Grand Total: $<span id="grandTotal">1299</span></h5>
+                    </div>
                 </div>
             </div>
         </div>
